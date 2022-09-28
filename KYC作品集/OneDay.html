@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+
+    <button onclick="PointMe()" id="BtnMe">點我啊!!</button>
+    <img src="image\6e90c7019780bfbecb45548f90522e24.png"  id="PicSmile" alt="" style="display:none; width:100px; height:100px;">
+    <img src="image\unnamed.jpeg" id="PicAngry" alt="" style="display:none;width: 100px; height: 100px;">
+    <img src="image\下載.png" alt="" id="PicWhy" style="display:none; width:100px; height:100px">
+    <img src="image\grid-cell-29116-1489166951-4-1.jpeg" alt="" id="PicNoway" style="display:none; width:100px; height:100px;">
+
+    
+    <script>
+        var x = 0
+        function PointMe(){  
+            if(x < 1){
+                alert("叫你點就點喔?!"); 
+                PicSmile.style.display = "block";
+                x++;
+            }
+            else if(x <= 2){
+                alert("你還繼續點?!");
+                PicSmile.style.display = "none";
+                PicWhy.style.display = "block";
+                x++;
+            }else if (x <= 3){
+                alert("講不聽ㄟ= =");
+                PicWhy.style.display = "none";
+                PicNoway.style.display = "block";
+                x++;
+            }
+            else{
+                alert("傻眼!不給你點了");
+                BtnMe.style.display="none";
+                PicNoway.style.display="none";
+                PicAngry.style.display = "block";
+                x++;
+            }
+            document.getElementById('BtnMe').innerHTML = "你已經點了"+ x + "次了ㄟ";
+            console.log(x);
+
+        }
+    </script>
+</body>
+</html>

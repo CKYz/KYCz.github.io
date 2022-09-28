@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: black;
+        }
+
+        .ContentBorder{
+            width: auto;
+            border:2px solid  rgba(255,255,255,0.5) ;
+            background-clip: padding-box;
+            height: 700px;
+            border-radius: 5px;
+            margin-top: 5px;
+        }
+        .ContentScape{
+            width: 100%;
+            height: 550px;
+            margin-top: 10px;
+        }
+
+        .TextInput{
+            border:2px solid  rgba(255,255,255,0.5) ;
+            background-clip: padding-box;
+            float: right;
+            background-color: aliceblue;
+            width: 45%;
+            height: 100%;
+            position: absolute;
+            top: 322px;
+            right: 30px;
+            border-radius: 5px;
+        }
+
+        .ContentHead {
+            border-radius: 60px;
+            border: none;
+            background-color: transparent;
+            width: 40px;
+            height: 40px;
+            border-radius: 50px;
+            margin: 15px 0 0 25px;
+            white-space: nowrap;
+        }
+
+        .MenuContent{
+            width:20px;
+            height: 20px;
+            margin: 10px 0 0 15px;
+        }
+
+        .MenuSave{
+            width:20px;
+            height: 20px;
+            float: right;
+            margin: 10px 15px 0 0;
+        }
+
+        .MenuHead{
+            width:20px;
+            height: 20px;
+            float: right;
+            margin: 25px 15px 0 0;
+        }
+
+        .Content{
+            width:50%;
+        }
+
+        .BtnHead {
+            border-radius: 60px;
+            border: none;
+            background-color: transparent;
+            width: 100px;
+            height: 100px;
+            border-radius: 50px;
+            margin: 20px 0 0 25px;
+            white-space: nowrap;
+        }
+
+        .BtnHeadText {
+            width: 100px;
+            height: 40px;
+            color: azure;
+            text-align: center;
+            font-family: Arial Narrow, sans-serif;
+            font-size: 10px;
+            margin: 5px 0 0 25px;
+            float: left;
+        }
+
+        .IconTag {
+            width: 30px;
+            height: 30px;
+            float: right;
+            margin-right: 25px;
+            color: azure;
+            margin-top: 15px;
+
+        }
+
+        .HeatIcon {
+            font-size: 40px;
+            font-family: Brush Script MT, Brush Script Std, cursive;
+            color: azure;
+        }
+
+        hr {
+            opacity: 0.05;
+        }
+
+        .PicHead {
+            overflow: hidden;
+            position: sticky;
+            background-color: black;
+            top: 0;
+            z-index: 3;
+        }
+
+        .PicHeadIn {
+            display: flex;
+            flex-direction: row;
+            overflow-x: auto;
+        }
+
+        .PicHeadInside {
+            height: 180px;
+            width: 150px;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <div class="PicHead">
+        <div class="HeadMove">
+            <span class="HeatIcon">Mystagram</span>
+            <img class="IconTag" src="image\chat.png" alt="">
+            <img class="IconTag" src="image\heart.png" alt="">
+            <img class="IconTag" src="image\plus.png" alt="">
+        </div>
+        <hr>
+        <ul class="PicHeadIn" style="width:auto;">
+            <li class="PicHeadInside">
+                <img class="BtnHead" onclick="ChangePic()"
+                    src="image\image\botanical-garden-g1ebbfb08c_1920.jpg" alt="">
+                <span id="TextShow" class="BtnHeadText">風景❤️🚴</span>
+            </li>
+            <li class="PicHeadInside">
+                <img class="BtnHead" onclick="ChangePic()"
+                    src="image\image\chingtienkang-1784872__340.jpg" alt="">
+                <span id="TextShow" class="BtnHeadText">風景🌞</span>
+            </li>
+            <li class="PicHeadInside">
+                <img class="BtnHead" onclick="ChangePic()" src="image\image\taipei-2845695__340.webp"
+                    alt="">
+                <span id="TextShow" class="BtnHeadText">風景</span>
+            </li>
+            <li class="PicHeadInside">
+                <img class="BtnHead" onclick="ChangePic()" src="image\image\taipei-taiwan-2057818__340.jpg"
+                    alt="">
+                <span id="TextShow" class="BtnHeadText">風景💕</span>
+            </li>
+            <li class="PicHeadInside">
+                <img class="BtnHead" onclick="ChangePic()" src="image\image\taipei-taiwan-2057819__340.webp"
+                    alt="">
+                <span id="TextShow" class="BtnHeadText">風景🍰</span>
+            </li>
+            <li class="PicHeadInside">
+                <img class="BtnHead" onclick="ChangePic()" src="image\image\taipei-taiwan-2115887__340.webp"
+                    alt="">
+                <span id="TextShow" class="BtnHeadText">風景🌟</span>
+            </li>
+            <li class="PicHeadInside">
+                <img class="BtnHead" onclick="ChangePic()" src="image\image\taiwan-1737087__340.webp" alt="">
+                <span id="TextShow" class="BtnHeadText">風景🌸</span>
+            </li>
+            <li class="PicHeadInside">
+                <img class="BtnHead" onclick="ChangePic()"
+                    src="image\image\taiwan-2696156__340.jpg" alt="">
+                <span id="TextShow" class="BtnHeadText">台灣絕美風景👫🍓💕</span>
+            </li>
+            <li class="PicHeadInside">
+                <img class="BtnHead" onclick="ChangePic()" src="image\image\taiwan-g4e29fbfaa_1920.jpg"
+                    alt="">
+                <span id="TextShow" class="BtnHeadText">風景💜😈</span>
+            </li>
+            <li class="PicHeadInside">
+                <img class="BtnHead" onclick="ChangePic()" src="image\image\taiwan-gc1eed4e5d_1920.jpg"
+                    alt="">
+                <span id="TextShow" class="BtnHeadText">風景</span>
+            </li>
+            <li class="PicHeadInside">
+                <img class="BtnHead" onclick="ChangePic()"
+                    src="image\image\woodland-669737__340.webp" alt="">
+                <span id="TextShow" class="BtnHeadText">風景❤️🚴</span>
+            </li>
+            <li class="PicHeadInside">
+                <img class="BtnHead" onclick="ChangePic()"
+                    src="image\image\festival-2728049__340.jpg" alt="">
+                <span id="TextShow" class="BtnHeadText">風景❤️🚴</span>
+            </li>
+        </ul>
+    </div>
+    <hr>
+
+    <div class="Content">
+        <ul>
+            <li>
+                <div class="ContentBorder">
+                    <img class="ContentHead" src="image\image\corgi-3697186__340.jpg" alt="">
+                    <img class="MenuHead" src="image\menu.png" alt="">
+                    <div ><img class="ContentScape" src="image\風景\LINE_ALBUM_220319星月天空想吃羊肉爐🌟_220709.jpg" alt=""></div>
+                    <div>
+                        <img class="MenuSave" src="image\flag.png" alt="">
+                        <img  id="BtnLike" onclick="ChangeLove()" class="MenuContent" src="image\heart.png" alt="">                        
+                        <img class="MenuContent" src="image\messenger.png" alt="">
+                        <img class="MenuContent" src="image\paper-plane.png" alt="">
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="ContentBorder">
+                    <img class="ContentHead" src="image\image\corgi-3697186__340.jpg" alt="">
+                    <img class="MenuHead" src="image\menu.png" alt="">
+                    <div ><img class="ContentScape" src="image\風景\LINE_ALBUM_220416-17台南跟我一樣甜💕_220709.jpg" alt=""></div>
+                    <div>
+                        <img class="MenuSave" src="image\flag.png" alt="">
+                        <img  id="BtnLike1" onclick="ChangeLove1()" class="MenuContent" src="image\heart.png" alt="">                        
+                        <img class="MenuContent" src="image\messenger.png" alt="">
+                        <img class="MenuContent" src="image\paper-plane.png" alt="">
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="ContentBorder">
+                    <img class="ContentHead" src="image\image\corgi-3697186__340.jpg" alt="">
+                    <img class="MenuHead" src="image\menu.png" alt="">
+                    <div ><img class="ContentScape" src="image\風景\LINE_ALBUM_220528-29我的愛像高屏的太陽一樣熱情🌞_220709.jpg" alt=""></div>
+                    <div>
+                        <img class="MenuSave" src="image\flag.png" alt="">
+                        <img  id="BtnLike2" onclick="ChangeLove2()" class="MenuContent" src="image\heart.png" alt="">                        
+                        <img class="MenuContent" src="image\messenger.png" alt="">
+                        <img class="MenuContent" src="image\paper-plane.png" alt="">
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="ContentBorder">
+                    <img class="ContentHead" src="image\image\corgi-3697186__340.jpg" alt="">
+                    <img class="MenuHead" src="image\menu.png" alt="">
+                    <div><img class="ContentScape" src="image\風景\LINE_ALBUM_20220619后豐say啊say丟咱欸愛❤️🚴_220709.jpg" alt=""></div>
+                    <div>
+                        <img class="MenuSave" src="image\flag.png" alt="">
+                        <img id="BtnLike3" onclick="ChangeLove3()" class="MenuContent" src="image\heart.png" alt="">                        
+                        <img class="MenuContent" src="image\messenger.png" alt="">
+                        <img class="MenuContent" src="image\paper-plane.png" alt="">
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <div class="TextInput">
+
+        </div>
+    </div>
+
+    <script src="three.js"></script>
+
+</body>
+
+</html>

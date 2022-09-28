@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Golden State Warriors</title>
+    <link href="styles.css" rel="stylesheet" />
+    <style>
+    .img-fluid {
+    width: 210px;
+     height: auto;
+     margin: 10px;
+    }
+    body{
+        background-color: whitesmoke;
+    }
+    .portfolio-caption{
+        width: 230px;
+        text-align: center;
+        height: 5px;
+        margin: 10px;
+    }
+    .portfolio-caption-subheading{
+        margin: 10px;
+    }
+
+    .portfolio-caption-heading{
+        width: 230px;
+        height: 100px;
+        font-family:Comic Sans MS, Comic Sans, cursive;
+        text-align: center;
+    }
+    
+    .portfolio-item{
+        float: left;  
+        margin: 40px;
+      
+    }
+    #demo2{
+        width: 230px;
+        height: 230px;
+    }
+    #show,#show1,#show2,#show3,#show4,#show5,#show6,#show7,#show8,#show9,#show10,#show11,#show12,#show13,#show14,#show15,#show16{
+        color: brown;
+        text-align: center;
+    }
+   #hide,#hide1,#hide2,#hide3,#hide4,#hide5,#hide6,#hide7,#hide8,#hide9,#hide10,#hide11,#hide12,#hide13,#hide14,#hide15,#hide16{
+            width: 230px;
+            height: auto;
+           margin: 0;
+           text-align: center;
+           font-family:Comic Sans MS, Comic Sans, cursive;
+     }
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+          <nav class="flex-nav">
+            <ul class="main-menu">
+              <li><a href="hm.html">Golden State Warriors</a></li>
+              <li><a href="history.html">HISTORY</a></li>
+              <li><a href="team.html">TEAM</a></li>
+              <li><a href="picture.html">PICTURE</a></li>
+              <li><a href="game.html">TEST</a></li>
+          </ul>
+          </nav>
+          <a href="hm.html" class="loge">
+            <img src="./img/Golden_State_Warriors.png" width="75" height="90" alt="pic">
+          </a>
+        </div>  
+      </header>
+    <section class="page-section bg-light" id="portfolio">
+        <div class="container_team">
+            <div class="row">
+                <div class="col-lg-4 col-sm-6 mb-4">
+                    
+                    <div class="portfolio-item">
+                        <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal1">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <div id="demo2"> 
+                                <a id="show" onclick="show()" href="javascript:;">【點擊顯示】</a>
+                                <div id="hide" style="display: none;">
+                                    <br>位置:前鋒<br>身高:206cm<br>體重:100.7kg<br>背號:05<br>生日:1996-02-06<br>球齡:6<br>年齡:25y<br>國家:USA</div>
+                                <img id="pict" class="img-fluid" src="https://cdn.nba.com/headshots/nba/latest/1040x760/1626172.png" alt="">
+                                <p id="name" class="portfolio-caption-heading"> Kevon Looney</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 mb-4">
+                    <div class="portfolio-item">
+                        <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal2">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <div id="demo2"> 
+                            <a id="show1" onclick="show1()" href="javascript:;" >【點擊顯示】</a>
+                                <div id="hide1" style="display: none;">
+                                    <br>位置:後衛<br>身高:190cm<br>體重:88.5kg<br>背號:0<br>生日:1992-12-01<br>球齡:5<br>年齡:29y<br>國家:USA</div>
+                                <img id="pict1" class="img-fluid" src="https://s.yimg.com/it/api/res/1.2/HYQRsd5wFM5ddU4V0zEeMg--~A/YXBwaWQ9eW5ld3M7dz0xMjAwO2g9NjMwO3E9MTAw/https://s.yimg.com/xe/i/us/sp/v/nba_cutout/players_l/10082021/5739.1.png" alt="">
+                                <p id="name1" class="portfolio-caption-heading">Gary Payton II</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 mb-4">
+                    <div class="portfolio-item">
+                        <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal3">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <div id="demo2"> 
+                                <a id="show2" onclick="show2()" href="javascript:;" >【點擊顯示】</a>
+                                    <div id="hide2" style="display: none;">
+                                        <br>位置:後衛-前鋒<br>身高:196cm<br>體重:95.3kg<br>背號:01<br>生日:1992-10-21<br>球齡:4<br>年齡:29y<br>國家:USA</div>
+                                    <img id="pict2" class="img-fluid" src="./img/1627814.png" alt="">
+                                    <p id="name2" class="portfolio-caption-heading">Damion Lee</p>
+                                </div>
+                            
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
+                    <div class="portfolio-item">
+                        <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal4">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <div id="demo2">
+                            <a id="show3" onclick="show3()" href="javascript:;" >【點擊顯示】</a>
+                            <div id="hide3" style="display: none;">
+                                <br>位置:後衛<br>身高:180cm<br>體重:79.4kg<br>背號:02<br>生日:1995-11-21<br>球齡:3<br>年齡:26y<br>國家:USA</div>
+                            <img id="pict3" class="img-fluid" src="./img/1629185.png" alt="">
+                            <p id="name3" class="portfolio-caption-heading">Chris Chiozza</p>  
+                        </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 mb-4 mb-sm-0">
+                    <div class="portfolio-item">
+                        <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal5">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <div id="demo2"> 
+                                <a id="show4" onclick="show4()" href="javascript:;" >【點擊顯示】</a>
+                                    <div id="hide4" style="display: none;">
+                                        <br>位置:前鋒<br>身高:198cm<br>體重:94.8kg<br>背號:95<br>生日:1993-04-10<br>球齡:2<br>年齡:28y<br>國家:USA</div>
+                                    <img id="pict4" class="img-fluid" src="./img/1629308.png" alt="">
+                                    <p id="name4" class="portfolio-caption-heading">Juan Toscano-Anderson</p>
+                                </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <div class="portfolio-item">
+                        <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal6">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <div id="demo2"> 
+                                <a id="show5" onclick="show5()" href="javascript:;" >【點擊顯示】</a>
+                                    <div id="hide5" style="display: none;">
+                                        <br>位置:後衛<br>身高:193cm<br>體重:88kg<br>背號:3<br>生日:1999-06-19<br>球齡:2<br>年齡:22y<br>國家:USA</div>
+                                    <img id="pict5" class="img-fluid" src="./img/1629673.png" alt="">
+                                    <p id="name5" class="portfolio-caption-heading">Jordan Poole</p>
+                                </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 mb-4">
+                    <div class="portfolio-item">
+                        <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal1">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <div id="demo2"> 
+                                <a id="show6" onclick="show6()" href="javascript:;" >【點擊顯示】</a>
+                                    <div id="hide6" style="display: none;">
+                                        <br>位置:中鋒<br>身高:213cm<br>體重:108.9kg<br>背號:33<br>生日:2001-03-31<br>球齡:1<br>年齡:20y<br>國家:USA</div>
+                                    <img id="pict6" class="img-fluid" src="./img/1630164.png" alt="">
+                                    <p id="name6" class="portfolio-caption-heading">James Wiseman</p>
+                                </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 mb-4">
+                    <div class="portfolio-item">
+                        <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal1">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <div id="demo2"> 
+                                <a id="show7" onclick="show7()" href="javascript:;" >【點擊顯示】</a>
+                                    <div id="hide7" style="display: none;">
+                                        <br>位置:前鋒<br>身高:201cm<br>體重:102.1kg<br>背號:00<br>生日:2002-10-06<br>球齡:0<br>年齡:19y<br>國家:RDC(剛果民主共和國)</div>
+                                    <img id="pict7" class="img-fluid" src="./img/1630228.png" alt="">
+                                    <p id="name7" class="portfolio-caption-heading">Jonathan Kuminga</p>
+                                </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 mb-4">
+                    <div class="portfolio-item">
+                        <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal1">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <div id="demo2"> 
+                                <a id="show8" onclick="show8()" href="javascript:;" >【點擊顯示】</a>
+                                    <div id="hide8" style="display: none;">
+                                        <br>位置:後衛<br>身高:190cm<br>體重:80.3kg<br>背號:21<br>生日:1997-05-10<br>球齡:0<br>年齡:24y<br>國家:USA</div>
+                                    <img id="pict8" class="img-fluid" src="./img/1630288.png" alt="">
+                                    <p id="name8" class="portfolio-caption-heading">Jeff Dowtin</p>
+                                </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 mb-4">
+                    <div class="portfolio-item">
+                        <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal1">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <div id="demo2"> 
+                                <a id="show9" onclick="show9()" href="javascript:;" >【點擊顯示】</a>
+                                    <div id="hide9" style="display: none;">
+                                        <br>位置:後衛<br>身高:196cm<br>體重:95.3kg<br>背號:4<br>生日:2002-05-31<br>球齡:0<br>年齡:19y<br>國家:USA</div>
+                                    <img id="pict9" class="img-fluid" src="./img/1630541.png" alt="">
+                                    <p id="name9" class="portfolio-caption-heading">Moses Moody</p>
+                                </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 mb-4">
+                    <div class="portfolio-item">
+                        <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal1">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <div id="demo2"> 
+                                <a id="show10" onclick="show10()" href="javascript:;" >【點擊顯示】</a>
+                                    <div id="hide10" style="display: none;">
+                                        <br>位置:後衛<br>身高:188cm<br>體重:83.9kg<br>背號:30<br>生日:1988-03-14<br>球齡:12<br>年齡:33y<br>國家:USA</div>
+                                    <img id="pict10" class="img-fluid" src="./img/201939.png" alt="">
+                                    <p id="name10" class="portfolio-caption-heading">Stephen Curry</p>
+                                </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 mb-4">
+                    <div class="portfolio-item">
+                        <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal1">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <div id="demo2"> 
+                                <a id="show11" onclick="show11()" href="javascript:;" >【點擊顯示】</a>
+                                    <div id="hide11" style="display: none;">
+                                        <br>位置:前鋒<br>身高:206cm<br>體重:106.1kg<br>背號:8<br>生日:1988-05-09<br>球齡:6<br>年齡:33y<br>國家:Serbia(塞爾維亞)</div>
+                                    <img id="pict11" class="img-fluid" src="./img/202357.png" alt="">
+                                    <p id="name11" class="portfolio-caption-heading">Nemanja Bjelica</p>
+                                </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 mb-4">
+                    <div class="portfolio-item">
+                        <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal1">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <div id="demo2"> 
+                                <a id="show12" onclick="show12()" href="javascript:;" >【點擊顯示】</a>
+                                    <div id="hide12" style="display: none;">
+                                        <br>位置:後衛<br>身高:198cm<br>體重:99.8kg<br>背號:11<br>生日:1990-02-08<br>球齡:8<br>年齡:31y<br>國家:USA</div>
+                                    <img id="pict12" class="img-fluid" src="./img/202691.png" alt="">
+                                    <p id="name12" class="portfolio-caption-heading">Klay Thompson</p>
+                                </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 mb-4">
+                    <div class="portfolio-item">
+                        <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal1">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <div id="demo2"> 
+                                <a id="show13" onclick="show13()" href="javascript:;" >【點擊顯示】</a>
+                                    <div id="hide13" style="display: none;">
+                                        <br>位置:前鋒<br>身高:198cm<br>體重:104.3kg<br>背號:23<br>生日:1990-03-04<br>球齡:9<br>年齡:31y<br>國家:USA</div>
+                                    <img id="pict13" class="img-fluid" src="./img/203110.png" alt="">
+                                    <p id="name13" class="portfolio-caption-heading">Draymond Green</p>
+                                </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 mb-4">
+                    <div class="portfolio-item">
+                        <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal1">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <div id="demo2"> 
+                                <a id="show14" onclick="show14()" href="javascript:;" >【點擊顯示】</a>
+                                    <div id="hide14" style="display: none;">
+                                        <br>位置:前鋒<br>身高:203cm<br>體重:89.8kg<br>背號:32<br>生日:1993-06-03<br>球齡:8<br>年齡:28y<br>國家:USA</div>
+                                    <img id="pict14" class="img-fluid" src="./img/203490.png" alt="">
+                                    <p id="name14" class="portfolio-caption-heading">Otto Porter Jr</p>
+                                </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 mb-4">
+                    <div class="portfolio-item">
+                        <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal1">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <div id="demo2"> 
+                                <a id="show15" onclick="show15()" href="javascript:;" >【點擊顯示】</a>
+                                    <div id="hide15" style="display: none;">
+                                        <br>位置:前鋒<br>身高:201cm<br>體重:89.4kg<br>背號:22<br>生日:1995-02-23<br>球齡:7<br>年齡:26y<br>國家:Canada(加拿大)</div>
+                                    <img id="pict15" class="img-fluid" src="./img/203952.png" alt="">
+                                    <p id="name15" class="portfolio-caption-heading">Andrew Wiggins</p>
+                                </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 mb-4">
+                    <div class="portfolio-item">
+                        <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal1">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <div id="demo2"> 
+                                <a id="show16" onclick="show16()" href="javascript:;" >【點擊顯示】</a>
+                                    <div id="hide16" style="display: none;">
+                                        <br>位置:後衛-前鋒<br>身高:198cm<br>體重:97.5kg<br>背號:9<br>生日:1984-01-28<br>球齡:17<br>年齡:37y<br>國家:USA</div>
+                                    <img id="pict16" class="img-fluid" src="./img/2738.png" alt="">
+                                    <p id="name16" class="portfolio-caption-heading">Andre Iguodala</p>
+                                </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="team.js"></script>
+</body>
+</html>

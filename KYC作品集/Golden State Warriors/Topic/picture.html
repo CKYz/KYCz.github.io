@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles.css" rel="stylesheet" />
+    <title>Golden State Warriors</title>
+    <style>
+    body,dl{
+        margin:0;
+        background-color:wheat;
+    }
+    dl{
+        padding-left: 0;
+        list-style: none;
+    }
+    .content{
+        width: 1200px;
+        height: 750px;
+        margin:30px auto 0;
+    }
+    .imgr{
+    width: 1200px;
+    height:750px;
+    }
+    .imgr>dl{
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+    }
+    .imgr>dl>dt{
+        position: absolute;
+        width: 600px;
+        height: 336px;
+        transition: 0.5s;
+    }
+    .lineb{
+        text-align: center;
+        width: 1200px;
+        height: 31px;
+    }
+    .list1{
+       transform:translateX(0)scale(0.81);
+       transform-origin: 0% 100%;
+       z-index: 1;
+    }
+    .list2{
+        transform:translateX(300px);
+        z-index: 2;
+    }
+    .list3{
+        transform:translateX(600px)scale(0.81);
+        transform-origin: 100% 100%;
+        z-index: 1;
+    }
+    .list4{
+        transform:translateX(900px)scale(0.81);
+        transform-origin: 100% 100%;
+    }
+    .list5{
+        transform:translateX(1200px)scale(0.81);
+        transform-origin: 100% 100%;
+    }
+    .list6{
+        transform:translateX(1500px)scale(0.81);
+        transform-origin: 100% 100%;
+    }
+    .list7{
+        transform:translateX(1800px)scale(0.81);
+        transform-origin: 100% 100%;
+    }
+    .list8{
+        transform:translateX(2100px)scale(0.81);
+        transform-origin: 100% 100%;
+    }
+    .lineb>span{
+        display: inline-block;
+        width: 35px;
+        height: 3px;
+        background-color: #1D428A;
+    }
+
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+          <nav class="flex-nav">
+            <ul class="main-menu">
+              <li><a href="hm.html">Golden State Warriors</a></li>
+              <li><a href="history.html">HISTORY</a></li>
+              <li><a href="team.html">TEAM</a></li>
+              <li><a href="picture.html">PICTURE</a></li>
+              <li><a href="game.html">TEST</a></li>
+          </ul>
+          </nav>
+          <a href="hm.html" class="loge">
+            <img src="./img/Golden_State_Warriors.png" width="75" height="90" alt="pic">
+          </a>
+        </div>  
+      </header>
+
+
+<div class="content">
+    <div class="imgr">
+        <dl>
+            <dt class="list1"><img src="./img/rb1.jpg" alt="" style="width: 600px; height: 750px;"></dt>
+            <dt class="list2"><img src="./img/rb2.jpg" alt="" style="width: 600px; height: 750px;"></dt>
+            <dt class="list3"><img src="./img/rb3.jpg" alt="" style="width: 600px; height: 750px;"></dt>
+            <dt class="list4"><img src="./img/rb4.jpg" alt="" style="width: 600px; height: 750px;"></dt>
+            <dt class="list5"><img src="./img/rb5.jpg" alt="" style="width: 600px; height: 750px;"></dt>
+            <dt class="list6"><img src="./img/rb6.jpg" alt="" style="width: 600px; height: 750px;"></dt>
+            <dt class="list7"><img src="./img/rb7.jpg" alt="" style="width: 600px; height: 750px;"></dt>
+            <dt class="list8"><img src="./img/rb8.jpg" alt="" style="width: 600px; height: 750px;"></dt>
+        </dl>
+    </div>
+    <div class="lineb">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+</div>
+    <script>
+        var index = 0 ;
+        var aSpan = document.querySelectorAll("span");
+        var aListName=["list1","list2","list3","list4","list5","list6","list7","list8"];
+        var aLi = document.querySelectorAll("dt");
+        var List1=document.querySelector(".list1");
+        var List3=document.querySelector(".list3");
+        function setLineBColor(){
+            for(var i=0; i<aSpan.length; i++){
+                aSpan[i] .style.background="#ccc";    
+            }
+            aSpan[index] .style.background="#45c17c";
+        }
+        setLineBColor();
+
+        function nextPic(){
+            aListName.unshift(aListName[7]);
+            aListName.pop();
+            for(var i=0;i<aSpan.length; i++){
+                aLi[i].setAttribute("class",aListName[i]);
+            }
+            index=index+1;
+            if(index>7){
+                index=0;
+            }
+            setLineBColor();
+        }
+        function prePic(){
+            aListName.push(aListName[0]);
+            aListName.shift();
+            for(var i=0;i<aSpan.length; i++){
+                aLi[i].setAttribute("class",aListName[i]);
+            }
+            index=index-1;
+            if(index<0){
+                index=7;
+            }
+            setLineBColor();
+        }
+
+        var list1=document.querySelector(".list1");
+        var list3=document.querySelector(".list3");
+        var imgList = document.querySelector(".imgr");
+
+        imgList.addEventListener("click",function(x){
+            console.log(x.target.parentNode.getAttribute("class"));
+            if(x.target.parentNode.getAttribute("class")==="list3"){
+                nextPic();
+            }
+            else if(x.target.parentNode.getAttribute("class")==="list1"){
+                prePic();
+            }
+        });
+
+
+    </script>
+</body>
+</html>

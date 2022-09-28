@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link href="styles.css" rel="stylesheet" />
+    <title>Golden State Warriors</title>
+    <style>
+        .game{
+            margin: 150px;
+            font-family:Comic Sans MS, Comic Sans, cursive;
+            padding: 100px;
+            text-align:center;
+            color:#263238;
+            background-color: #f9fbe7;
+            height: 100px;
+        }
+        body{
+            background-image: url(./img/slider2.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="main-header">
+        <div class="container">
+          <nav class="flex-nav">
+            <ul class="main-menu">
+              <li><a href="hm.html">Golden State Warriors</a></li>
+              <li><a href="history.html">HISTORY</a></li>
+              <li><a href="team.html">TEAM</a></li>
+              <li><a href="picture.html">PICTURE</a></li>
+              <li><a href="game.html">TEST</a></li>
+          </ul>
+          </nav>
+          <a href="hm.html" class="loge">
+            <img src="./img/Golden_State_Warriors.png" width="75" height="90" alt="pic">
+          </a>
+        </div>  
+      </header>
+    <div class="game">
+   <h1>請輸入2021勇士球員測試你是否為勇迷</h1>
+   <input id="numb" type="text">
+   <button onclick="find()">輸入</button>
+   <h3>【請輸入全名】</h3>
+   <p id="demo"></p>
+
+      <script>
+        function find(){
+            var name = document.getElementById('numb').value;
+            var result = " ";
+            switch(name){
+            case "Nemanja Bjelica": case "Moses Moody":case "Damion Lee":case "Draymond Green":case "Jonathan Kuminga":
+            case "Chris Chiozza":case "Stephen Curry":case "Jeff Dowtin":case "Andre Iguodala":case "Kevon Looney":
+            case "Gary Payton II":case "Jordan Poole":case "Otto Porter Jr":case "Klay Thompson":case "Juan Toscano-Anderson":
+            case "Andrew Wiggins":case "James Wiseman":
+                result = ("恭喜答對! 你是正港勇迷");
+                break;  
+            default :
+                result = ("答錯嘍! 出口旁邊請慢走!");
+                break;
+            }
+            document.getElementById('demo').innerText = result;
+            } 
+
+    </script>
+    </div>
+
+</body>
+
+</html>

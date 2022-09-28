@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="BoomNum" style="display: none;"></div>
+    <div>請輸入0~100數字</div>
+    <input type="text" oninput = "value=value.replace(/[^\d]/g,'')" id="intPut">
+    <button onclick="NumAns()">送出答案</button>
+
+
+    <div id="NumRange"></div>
+    <div id="ULose"></div>
+    <img src="image\72255528.jpeg" alt="" id="DieLose" style="display:none;">
+
+
+    <script>
+        var r = Math.round(Math.random()*100);
+        document.getElementById("BoomNum").innerText = r;
+        console.log(r);
+
+        function NumAns(){
+            var x = document.getElementById("intPut").value;
+            console.log(x);
+            if(r == x)
+            {
+                document.getElementById("ULose").innerHTML = "踩到地雷 你輸了!";
+                DieLose.style.display = "block";
+            }else{
+                document.getElementById("ULose").innerHTML = "繼續輸入八";
+            }
+
+            if(r > x){  
+                document.getElementById("NumRange").innerHTML = "大一點"
+            }else if(r < x){
+                document.getElementById("NumRange").innerHTML = "小一點" 
+            }else{
+                document.getElementById("NumRange").innerHTML = "哈哈"
+            }
+
+
+        }
+
+    </script>
+</body>
+</html>
